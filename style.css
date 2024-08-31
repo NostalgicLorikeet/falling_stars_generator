@@ -1,0 +1,83 @@
+:root {
+	--border: 1px dashed white;
+}
+* {
+	margin: 0px;
+	font-family: "MS UI Gothic";
+	color: white;
+}
+#holder {
+	margin: 8px;
+	display: flex;
+}
+#canvas {
+	border: var(--border);
+}
+#controls {
+	border: var(--border);
+	width: 20%;
+	margin-left: auto;
+	order: 2;
+	background: black;
+	text-align: center;
+	position: absolute;
+	right: 8px;
+}
+#title, #options, #credits {
+	padding: 4px;
+}
+#title {
+	span {
+		font-size: 150%;
+	}
+	border-bottom: var(--border);
+}
+#options {
+	font-size: 80%;
+	height: 600px;
+	overflow-y: auto;
+	scrollbar-color: white black;
+	scrollbar-width: thin;
+	button, input {
+		color: black;
+		font-weight: bold;
+	}
+	* {
+		margin: 4px;
+	}
+}
+#credits {
+	border-top: var(--border);
+	padding: 4px;
+	span {
+		font-size: 70%;
+		color: grey;
+		a {
+			color: grey;
+		}
+		a:hover {
+			color: white;
+		}
+	}
+}
+#description {
+	margin: 4px;
+	border: 1px solid white;
+	color: black;
+	background: white;
+	height: 100px;
+	overflow-y: auto;
+	scrollbar-color: black white;
+	scrollbar-width: thin;
+	text-align: left;
+	padding: 4px;
+}
+body {
+	background: black;
+}
+#die {
+	text-decoration: none;
+}
+#die:hover {
+	text-decoration: underline;
+}

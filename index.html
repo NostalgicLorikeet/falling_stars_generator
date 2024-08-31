@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<a href="https://hitscan.org" id="die"><span style="color: grey; padding: 4px; font-size: 70%;"><--- back to site</span></a>
+		<div id="holder">
+			<canvas id="canvas" width="800" height="600"></canvas>
+			<div id="controls">
+				<div id="title">
+					<span>Falling stars generator</span>
+				</div>
+				<div id="options">
+					<button type="button" onclick="running=true;">Play</button> <button type="button" onclick="running=false;">Pause</button><br>
+					<button type="button" onclick="reset();">Reset/update</button><br>
+					<button type="button" onclick="setValuesDefault();">Reset to default</button><br>
+					Time between runs (in ms) <input id="framerate" type="number" min="1" max="10000"/><br>
+					Canvas size (w/h) <input id="canvaswidth" type="number" min="0" max="4096"/><input id="canvasheight" type="number" min="0" max="4096"/><br>
+					Star count <input id="starcount" type="number" min="0" max="8192"/><br>
+					Speed (min,max) <input id="speedmin" type="number" min="0" max="256"/><input id="speedmax" type="number" min="0" max="256"/><br>
+					Star size min (w/h) <input id="sizewidthmin" type="number" min="1" max="64"/><input id="sizeheightmin" type="number" min="1" max="64"/><br>
+					Star size max (w/h) <input id="sizewidthmax" type="number" min="1" max="64"/><input id="sizeheightmax" type="number" min="1" max="64"/><br>
+					Proportion star length to speed <input type="checkbox" id="proportionlength" unchecked /><br>
+					Color min <input id="rmin" type="number" min="0" max="255"/><input id="gmin" type="number" min="0" max="255"/><input id="bmin" type="number" min="0" max="255"/><br>
+					Color max <input id="rmax" type="number" min="0" max="255"/><input id="gmax" type="number" min="0" max="255"/><input id="bmax" type="number" min="0" max="255"/>
+				</div>
+				<div id="credits">
+					<span>by <a href="https://hitscan.org/about">NostalgicLorikeet / miles</a></span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="stars.js"></script>
+	<script>
+		start();
+	</script>
+</html>
